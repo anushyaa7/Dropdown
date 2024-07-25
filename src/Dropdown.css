@@ -1,0 +1,13 @@
+.dropdown-container {
+    width: 400px;
+}
+
+.custom-textfield .MuiInputBase-root {
+    border-radius: 13px; 
+  }
+  
+.dropdown-paper {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 1px solid #94A3B8; 
+}
