@@ -1,40 +1,37 @@
 import { Autocomplete, Checkbox, TextField } from "@mui/material";
 import React from "react";
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import "./Dropdown.css"
+import Checked from "./assets/Checked.png"
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 export default function Dropdown() {
   return (
     <Autocomplete
       multiple
-      id="checkboxes-tags-demo"
+      id="tags-demo"
       options={top100Films}
       disableCloseOnSelect
       getOptionLabel={(option) => option.title}
       renderOption={(props, option, { selected }) => {
         const { key, ...optionProps } = props;
         return (
-          <li key={key} {...optionProps}>
-            <Checkbox
-              icon={icon}
-              checkedIcon={checkedIcon}
-              style={{ marginRight: 8 }}
-              checked={selected}
-            />
-            {option.title}
+          <li key={key} {...optionProps} className="option-item">
+            <div className="icon-placeholder">
+              {selected && <img src={Checked} alt="checked" className="checked-icon" />}
+            </div>
+            <span className="option-text">{option.title}</span>
           </li>
         );
       }}
       className="dropdown-container"
       renderInput={(params) => (
-        <TextField {...params} 
-        placeholder="Placeholder"
-        className="custom-textfield"  
-         />
+        <TextField
+          {...params}
+          placeholder="Search"
+          className="custom-textfield"
+          variant="outlined"
+         
+        />
       )}
       classes={{
         paper: "dropdown-paper",

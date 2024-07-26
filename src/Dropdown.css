@@ -1,5 +1,5 @@
 .dropdown-container {
-    width: 400px;
+    width: 380px;
 }
 
 .custom-textfield .MuiInputBase-root {
@@ -10,4 +10,29 @@
     margin-top: 4px;
     margin-bottom: 4px;
     border: 1px solid #94A3B8; 
+    
 }
+
+.option-item {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+  
+.icon-placeholder {
+    width: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .checked-icon {
+    width: 16px; 
+    height: 10px; 
+  }
+  
+  .option-text {
+    margin-left: 20px; 
+  }
